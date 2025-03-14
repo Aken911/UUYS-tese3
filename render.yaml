@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: uuys-app
+    env: node
+    buildCommand: ./build.sh
+    startCommand: node .next/standalone/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_BASE_URL
+        value: https://vv.xunboe.cn
+      - key: NEXT_PUBLIC_IMAGE_BASE_URL
+        value: https://vv.xunboe.cn/images 
